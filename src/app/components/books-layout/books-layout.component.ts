@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../../models/book';
 
 @Component({
   selector: 'app-books-layout',
@@ -8,13 +7,9 @@ import { Book } from '../../models/book';
 })
 export class BooksLayoutComponent implements OnInit {
 
-	book: Book;
   constructor() { }
 
   ngOnInit() {
 	}
 	
-	addBookToList(book: Book) : void {
-		this.book = book;
-	}
 }

@@ -16,13 +16,13 @@
       </mat-option>
     </mat-select>
     <mat-error *ngIf=" this.addBooksForm.get('category').errors && this.addBooksForm.get('category').errors.required">
-      Title is <strong>required</strong>
+      Category is <strong>required</strong>
     </mat-error>
   </mat-form-field>
   <mat-form-field>
     <textarea matInput placeholder="Description" formControlName="description" [errorStateMatcher]="matcher"></textarea>
     <mat-error *ngIf="this.addBooksForm.get('description').errors && this.addBooksForm.get('description').errors.required">
-      Title is <strong>required</strong>
+      Description is <strong>required</strong>
     </mat-error>
   </mat-form-field>
   <button mat-flat-button color="primary" (click)="addBooks()">Add</button>
