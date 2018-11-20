@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
-# Demo Screenshot
+## Demo Screenshot
 https://github.com/iammanusharma/bookStore/issues/1
 
 ## Development server
