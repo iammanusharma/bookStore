@@ -1,0 +1,12 @@
+.book-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-container h2 {
+	text-align: left;
+}
+
+.book-container {
+  width: 100%;
+}

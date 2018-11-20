@@ -1,0 +1,22 @@
+.book-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-container h2 {
+	text-align: left;
+}
+.book-container {
+  width: 100%;
+}
+.mat-list-item {
+	font-size:20px;
+}
+.divide-one {
+	text-align:left;
+	width:25%;
+}
+.divide-two {
+	text-align:left;
+	width:75%;
+}

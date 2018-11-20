@@ -1,0 +1,19 @@
+<div *ngIf="bookList" class="book-container">
+  <h2>Book List <span *ngIf="bookList && bookList.length > 0">( {{bookList.length}} )</span></h2>
+  <mat-list>
+    <div *ngFor="let book of bookList">
+      <mat-list-item cols="2">
+        <p class="divide-one">Title : </p>
+        <P class="divide-two">{{book.title}} ( {{book.category}} ) </P>
+      </mat-list-item>
+      <mat-list-item>
+        <p class="divide-one">Description: </p>
+        <p class="divide-two"> {{book.description}} </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+		</div>
+		<div *ngIf="bookList.length === 0">
+			There are no records to display
+		</div>
+  </mat-list>
+</div>

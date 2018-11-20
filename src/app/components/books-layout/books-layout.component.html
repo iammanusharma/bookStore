@@ -1,0 +1,9 @@
+  <mat-toolbar color="primary">
+    <span>Book Store</span>
+  </mat-toolbar>
+  <mat-card>
+    <app-books-add (addBookList)='addBookToList($event)'></app-books-add>
+  </mat-card>
+  <mat-card>
+    <app-books-list [book]="book" ></app-books-list>
+  </mat-card>
