@@ -3,5 +3,6 @@ export interface Book {
   category: string;
   description: string;
   cost: number;
+  rating: number;
 }
 
