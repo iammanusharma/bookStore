@@ -8,6 +8,7 @@ import { BooksLayoutComponent } from './components/books-layout/books-layout.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BookService } from './services/book.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BookService } from './services/book.service';
   ],
   imports: [
 		BrowserModule,
-		BrowserAnimationsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
 		MatFormFieldModule,
 		MatSelectModule,
 		MatInputModule,
@@ -28,7 +30,7 @@ import { BookService } from './services/book.service';
 		MatButtonModule,
 		ReactiveFormsModule,
 		FormsModule
-		
+
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
