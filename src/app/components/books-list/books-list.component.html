@@ -17,3 +17,23 @@
 		</div>
   </mat-list>
 </div>
+
+ <table class="table table-striped">
+   <thead>
+     <tr>
+       <th scope="col">CustomerId</th>
+       <th scope="col">CustomerFirstName</th>
+       <th scope="col">CustomerLastName</th>
+       <th scope="col">CustomerContact</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr *ngFor="let post of posts">
+       <a scope="row">{{post.CustomerId}}</a>
+       <td>{{post.CustomerFirstName}}</td>
+       <td>{{post.CustomerLastName}}</td>
+       <td>{{post.CustomerContact}}</td>
+     </tr>
+   </tbody>
+ </table>
+
