@@ -1,0 +1,51 @@
+<div style="text-align:center">
+  <h1>
+    Welcome!
+  </h1>
+</div>
+<h2 [formGroup]="emailValidationForm" class="ml-3">
+  <input formControlName="email" >
+</h2>
+
+<!-- <ul class="list-group">
+  <li *ngFor="let post of posts" class="list-group-item">
+    <button class="btn btn-sm btn-primary" (click)="deletePost(post)">Delete </button>
+    {{post.title}}
+  </li>
+</ul> -->
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">CustomerId</th>
+      <th scope="col">CustomerFirstName</th>
+      <th scope="col">CustomerLastName</th>
+      <th scope="col">CustomerContact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of customerDisplay">
+      <a scope="row" (click)="getCustomerDetails(post.CustomerId)">{{post.CustomerId}}</a>
+      <td>{{post.CustomerFirstName}}</td>
+      <td>{{post.CustomerLastName}}</td>
+      <td>{{post.CustomerContact}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div *ngIf="customerTransactionDetails.length > 0">
+  <div *ngFor="let customerTransactionDetail of customerTransactionDetails">
+      {{customerTransactionDetail.AccountId}}
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngFor="let transaction of customerTransactionDetail.Transactions">
+            <a scope="row" >{{transaction.id}}</a>
+            <td>{{transaction.Amount}}</td>
+            <td>{{transaction.Date}}</td>
+            <td>{{transaction.TransactionCode}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
