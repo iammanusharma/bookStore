@@ -1,0 +1,28 @@
+
+<form [formGroup]="emailValidationForm" (ngSubmit)="onSubmit()">
+    <div class="lblMsg">
+        <mat-label>Enter your email to log in to wizardpay or to create a new account.</mat-label>
+    </div>
+    <div class="inputTextField" dir="ltr">
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" (blur)=logValidationErrors()>
+            <span class="alerts" *ngIf="formErrors.email">
+                <span class="ms-Icon ms-Icon--AlertSolid alertIcon iconError" *ngIf="formErrors.email"></span>
+            </span>
+            <span class="alerts" *ngIf="!formErrors.email && emailForm.email.touched">
+                <span class="ms-Icon ms-Icon--CompletedSolid alertIcon iconSuccess"
+                    *ngIf="!formErrors.email && emailForm.email.touched"></span>
+            </span>
+            <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+        </mat-form-field>
+    </div>
+    <button type="button" class="btn btnContinue" [disabled]="!canContinue" (click)="onSubmit()">Continue</button>
+</form>
+
+<app-modal-wrapper [(showModal)]="showModal">
+    <p>Leave and go back to merchant site?</p>
+    <p>Leaving now will not activate your wizardpay payment and will not create your account.</p>
+    <button type="button" class="btn btnPrimary" (click)="showModal = !showModal">Stay on page</button>
+    <button type="button" class="btn btnSecondary">Leave page</button>
+</app-modal-wrapper>
